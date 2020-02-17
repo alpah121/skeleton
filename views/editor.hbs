@@ -1,0 +1,72 @@
+<div id="navbar">
+
+	<ul class="nav nav-pills justify-content-end">
+		<li class="nav-item">
+		<div class="container-fluid">
+	<a onclick="toggleSidebar()">
+	<button type="button"  id="sidebarCollapse" class="btn btn-info">
+	<i class="fas fa-align-left"></i>
+	<span>Toggle Sidebar</span>
+	</button>
+	</a>
+	</div>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#" onclick="newRow(3)">Three Columns</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#" onclick="newRow(2)">Two Columns</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#" onclick="newRow(1)">One Column</a>
+		</li>
+			
+	</ul>
+</div>
+<div id="modal">
+	<div id="modalContent">
+	<h2>Edit Element</h2>
+	Background Color: <input type="color" id="backgroundColor"/><br/>
+	Text Color: <input type="color" id="textColor"/><br/>
+	<textarea id="copy" cols="50" rows="15" placeholder="Insert Text Here..."></textarea><br/>
+	<button onclick="saveElement()">Save</button>
+	</div>
+</div>
+
+<div class="wrapper">
+	
+
+<nav id="sidebar">
+	<div class="sidebar-header">
+	<button type="button" class="btn btn-success" onclick="publishPage()">Publish</button>
+	<h3>Elements</h3>
+	</div>
+	<ul class="list-unstyled-components">
+		<li>
+			<a id="heading" draggable="true" ondragstart="drag(event)">Heading</a>
+		</li>
+		<li>
+			<a id="paragraph" draggable="true" ondragstart="drag(event)">Paragraph</a>
+		</li>
+		<li>
+			<a id="button" draggable="true" ondragstart="drag(event)">Button</a>
+		</li>
+	</ul>
+</nav>
+</div>
+<div id="page">
+div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+  <div class="col-md-5 p-lg-5 mx-auto my-5" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <h1 class="display-4 font-weight-normal" id="headlineOne">Punny headline</h1>
+    <p class="lead font-weight-normal" id="subHeadlineOne">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple’s marketing pages.</p>
+    <a class="btn btn-outline-secondary" href="#">Coming soon</a>
+  </div>
+  <div class="product-device shadow-sm d-none d-md-block"></div>
+  <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="/public/js/editor.js"></script>
+
+
